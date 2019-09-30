@@ -1,0 +1,23 @@
+//Simples sistema da faculdade para calcular total devedor da filial em C++
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+    int deseja = 1, valordomes1, valordomes2, valordomes3, totalFilial, totalEmpresa = 0;
+    do {
+        printf("valor do mes 1: ");
+        scanf("%d", &valordomes1);
+        printf("valor do mes 2: ");
+        scanf("%d", &valordomes2);
+        printf("valor do mes 3: ");
+        scanf("%d", &valordomes3);
+        totalFilial = valordomes1 + valordomes2 + valordomes3;
+        totalEmpresa += totalFilial;
+        printf("Valor total da filial: %d\n", totalFilial);
+        printf("------------------------------------n");
+        printf("Total do restaurante: %d\n", totalEmpresa);
+        printf("Se nao deseja calcular o proximo valor de vendas de outra filial digite o numero zero.\n");
+        scanf("%c", &deseja);
+    } while (deseja != '0');
+    return 0;
+}
